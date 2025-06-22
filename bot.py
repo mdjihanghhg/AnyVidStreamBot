@@ -22,8 +22,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     q = update.callback_query
     await q.answer()
     _, url = q.data.split("|", 1)
-    return await q.message.reply_text(f"⬇️ ডাউনলোড লিংক:
-{url}")
+    return await q.message.reply_text(f"⬇️ ডাউনলোড লিংক:\n{url}")
 
 def main():
     TOKEN = os.getenv("BOT_TOKEN")
